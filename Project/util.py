@@ -1,15 +1,10 @@
-import os
 import pandas as pd
 import xlsxwriter
-import smtplib
-import ssl
-import mimetypes
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
 
 def dataframe_to_excel(df, filename):
     """Improvement on df.csv - outputs dataframe to a table in an xlsx format.
+
     Args:
         df (dataframe): data to write to Excel
         filename (string): Print location & filename for xlsx file
@@ -46,7 +41,7 @@ def dataframe_to_excel(df, filename):
     except xlsxwriter.exceptions.FileCreateError as e:
         print("Could not create file", e)
     except Exception as E:
-        print(E, type(E).__name__, __file__, E.__traceback__.tb_lineno)
+        print(type(E).__name__, __file__, E.__traceback__.tb_lineno, "\n", E)
 
 
 def loop_replace(text_str="", replacements=[""]):
