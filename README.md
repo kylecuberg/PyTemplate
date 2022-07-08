@@ -40,6 +40,10 @@ To apply black (depends on system setup)
 
 > black [filename]
 
+To analyze flake8 violations
+> flake8 Project --exit-zero --format=html --htmldir ./reports/flake8 --statistics --tee --output-file flake8stats.txt
+
+
 ## TODO
 - [] Item 1
 - [] Item 2
@@ -54,10 +58,15 @@ To apply black (depends on system setup)
 
 ### CodeStyle
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Code format: Flake8](https://github.com/PyCQA/flake8/workflows/main/badge.svg)](https://github.com/PyCQA/flake8)
+[![Flake8 Status](./reports/flake8/flake8-badge.svg?dummy=8484744)](./reports/flake8/index.html)
 ### Badges
+[![Build Status](https://github.com/kylecuberg/PyTemplate/workflows/build/badge.svg)](https://github.com/kylecuberg/PyTemplate/actions)
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/kylecuberg/PyTemplate.svg)](https://github.com/kylecuberg/PyTemplate/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylecuberg/PyTempalte.svg)](https://github.com/kylecuberg/PyTemplate/pulls)
-[![Python 3.7+](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+
