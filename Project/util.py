@@ -49,77 +49,7 @@ def dataframe_to_excel(df, filename):
         print(E, type(E).__name__, __file__, E.__traceback__.tb_lineno)
 
 
-class the_email:
-    """Email object. Currently configured for gmail, prompts for password."""
-
-    def __init__(self):
-        """Creation of object
-
-        Returns:
-            email: email-ready object
-        """
-        self.port = 465  # For SSL
-        self.context = ssl.create_default_context()
-        self.sender_email = self.get_input("email")
-        self.sender_password = self.get_input("password")
-        return None
-
-    def get_input(self, str_of_item):
-        """Get inputs to email
-
-        Args:
-            str_of_item (string): string to ask user for
-
-        Returns:
-            string: user-entered string
-        """
-        return input(f"Type {str_of_item} and press enter: ")
-
-    def email_out(self, subject, body, to, cc="", bcc="", attachment=""):
-        """Sends email with given parameters
-
-        Args:
-            subject (str): _description_
-            body (str): string/html of what the body of the email should say
-            to (str): To for email
-            cc (str, optional): CC  for email. Defaults to "".
-            bcc (str, optional): BCC for email. Defaults to "".
-            attachment (str, optional): Filepath/filename of any attachments to include. Defaults to "".
-        """
-
-        message = MIMEMultipart("alternative")
-        message["Subject"] = subject
-        message["From"] = self.sender_email
-        message["To"] = to
-        message["Cc"] = cc
-        message["Bcc"] = bcc
-        message.attach(MIMEText(body, "html"))
-        if attachment != "":
-            with open(attachment, "rb") as f:
-                message.add_attachment(
-                    f.read(),
-                    maintype="application",
-                    subtype="xlsx",
-                    filename=attachment,
-                )
-                attachment_filename = os.path.basename(attachment)
-                mime_type, _ = mimetypes.guess_type(attachment)
-                mime_type, mime_subtype = mime_type.split("/", 1)
-                message.add_attachment(
-                    f.read(),
-                    maintype=mime_type,
-                    subtype=mime_subtype,
-                    filename=attachment_filename,
-                )
-
-        with smtplib.SMTP_SSL(
-            "smtp.gmail.com", self.port, context=self.context
-        ) as server:
-            server.login(self.sender_email, self.sender_password)
-            server.send_message(message)
-
-
-def loop_remove(text_str="", replacements=[""]):
+def loop_replace(text_str="", replacements=[""]):
     """Does str.replace() for a list of strings.
     Args:
         text_str (str): text to remove from
@@ -132,3 +62,13 @@ def loop_remove(text_str="", replacements=[""]):
         for i in replacements:
             text_str = text_str.replace(i, "")
     return text_str
+
+
+def seconds_but_readable(seconds):
+    seconds = seconds % (24 * 3600)
+    hour = seconds // 3600
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+
+    return "%d:%02d:%02d" % (hour, minutes, seconds)
