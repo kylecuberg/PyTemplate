@@ -58,7 +58,7 @@ To analyze flake8 violations
 
 ### CodeStyle
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Flake8 Status](./reports/flake8/flake8-badge.svg?dummy=8484744)](./reports/flake8/index.html)
+[![Flake8 Status](./reports/flake8/flake8-badge.svg)](./reports/flake8/index.html)
 ### Badges
 [![Build Status](https://github.com/kylecuberg/PyTemplate/workflows/build/badge.svg)](https://github.com/kylecuberg/PyTemplate/actions)
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
