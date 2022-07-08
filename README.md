@@ -8,6 +8,7 @@ Template Python Project
 - [TODO](#todo)
 - [Authors](#authors)
 - [License](#license)
+- [CodeStyle](#codestyle)
 - [Badges](#badges)
 
 ## About
@@ -49,11 +50,12 @@ To apply black (depends on system setup)
 
 
 ### License
-[MIT](https://choosealicense.com/licenses/mit/) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-### Badges
+### CodeStyle
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Code format: Flake8](https://github.com/PyCQA/flake8/workflows/main/badge.svg)](https://github.com/PyCQA/flake8)
+### Badges
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/kylecuberg/PyTemplate.svg)](https://github.com/kylecuberg/PyTemplate/issues)
