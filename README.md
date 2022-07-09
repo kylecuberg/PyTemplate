@@ -42,6 +42,7 @@ To apply black (depends on system setup)
 
 To analyze flake8 violations
 > flake8 Project --output-file ./reports/flake8/flake8stats.txt
+
 > flake8 Project --exit-zero --format=html --htmldir ./reports/flake8 --statistics --tee --output-file flake8stats.txt
 
 For genbadge on Flake8 (must do both flake8 commands first)
