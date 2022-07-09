@@ -41,7 +41,11 @@ To apply black (depends on system setup)
 > black [filename]
 
 To analyze flake8 violations
+> flake8 Project --output-file ./reports/flake8/flake8stats.txt
 > flake8 Project --exit-zero --format=html --htmldir ./reports/flake8 --statistics --tee --output-file flake8stats.txt
+
+For genbadge on Flake8 (must do both flake8 commands first)
+> genbadge flake8 --output-file ./reports/flake8/badge.svg
 
 
 ## TODO
@@ -58,7 +62,7 @@ To analyze flake8 violations
 
 ### CodeStyle
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Flake8 Status](./reports/flake8/flake8-badge.svg)](./reports/flake8/index.html)
+[![Flake8 Status](./reports/flake8/badge.svg)](./reports/flake8/index.html)
 ### Badges
 [![Build Status](https://github.com/kylecuberg/PyTemplate/workflows/build/badge.svg)](https://github.com/kylecuberg/PyTemplate/actions)
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
