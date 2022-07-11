@@ -38,7 +38,8 @@ To freeze requirements.txt after additional installs
 To analyze flake8 violations
 > flake8 Project --output-file ./reports/flake8/flake8stats.txt
 
-> flake8 Project --exit-zero --format=html --htmldir ./reports/flake8 --statistics --tee --output-file flake8stats.txt
+Advanced flake8
+> flake8 Project --exit-zero --format=html --htmldir ./reports/flake8 --statistics --tee --output-file .reports/flake8/flake8stats.txt
 
 For genbadge on Flake8 (must do both flake8 commands first)
 > genbadge flake8 --output-file ./reports/flake8/badge.svg
@@ -76,7 +77,7 @@ To apply black (depends on system setup)
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/kylecuberg/PyTemplate.svg)](https://github.com/kylecuberg/PyTemplate/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylecuberg/PyTempalte.svg)](https://github.com/kylecuberg/PyTemplate/pulls)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylecuberg/PyTemplate.svg)](https://github.com/kylecuberg/PyTemplate/pulls)
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
