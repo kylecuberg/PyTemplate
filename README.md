@@ -35,11 +35,6 @@ To install requirements.txt
 To freeze requirements.txt after additional installs
 > pip freeze > requirements.txt
 
-To apply black (depends on system setup)
-> py -m black [filename]
-
-> black [filename]
-
 To analyze flake8 violations
 > flake8 Project --output-file ./reports/flake8/flake8stats.txt
 
@@ -48,6 +43,19 @@ To analyze flake8 violations
 For genbadge on Flake8 (must do both flake8 commands first)
 > genbadge flake8 --output-file ./reports/flake8/badge.svg
 
+Pre-commit setup
+
+> pre-commit install
+
+> pre-commit run --all-files
+
+> pre-commit autoupdate
+
+## Outdated commands with Pre-Commit
+To apply black (depends on system setup)
+> py -m black [filename]
+
+> black [filename]
 
 ## TODO
 - [] Item 1
@@ -73,4 +81,3 @@ For genbadge on Flake8 (must do both flake8 commands first)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
-
