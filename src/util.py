@@ -1,3 +1,9 @@
+# Standard library
+import logging
+
+logger = logging.getLogger(__name__)  # put this in each file
+
+
 def loop_replace(text_str="", replacements=[""]):
     """Does str.replace() for a list of strings.
     Args:
